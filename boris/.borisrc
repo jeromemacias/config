@@ -1,0 +1,3 @@
+<?php
+require '.borislib';
+loadBoris($boris, array(new SymfonyLoader(), new ComposerLoader()));

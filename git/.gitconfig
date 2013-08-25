@@ -1,0 +1,43 @@
+[core]
+	autocrlf = input
+	excludesfile = /usr/local/etc/git/.gitignore
+
+[user]
+        name = Jérôme Macias
+        email = jerome.macias@gmail.com
+
+[alias]
+        lg2 = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+        co = checkout
+        br = branch --verbose
+        bra = branch -a
+        ci = commit
+        cia = commit --amend
+        changes = diff --name-status
+        st = status
+        df = diff --ignore-space-at-eol
+        dfh = "!f() { git df --color \"$@\" | /usr/local/etc/git/diff-highlight; }; f"
+        dfc = diff --cached --ignore-space-at-eol
+        dfs = diff --stat
+        up = pull --rebase
+        unstage = reset --hard
+        undo = undo = git reset --soft HEAD^
+        last = log -1 HEAD
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+        ui = true
+
+[github]
+        user = jeromemacias
+        token = ******
+[push]
+	default = current
+[branch]
+	autosetuprebase = always
+[diff "pdfconv"]
+	textconv=pdftohtml -stdout
