@@ -69,7 +69,8 @@ function launch-phpfpm {
 	launchctl load -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php54.plist
 }
 
+ulimit -n 1024
+
 #unalias run-help
 #autoload run-help
 #HELPDIR=/usr/local/share/zsh/helpfiles
-
