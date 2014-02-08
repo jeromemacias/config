@@ -61,14 +61,22 @@ alias la='ls -lAh'
 
 alias sfunit='phpunit -c app'
 
-function launch-nginx {
-	sudo launchctl unload -w /System/Library/LaunchAgents/homebrew.mxcl.nginx.plist
-	sudo launchctl load -w /System/Library/LaunchAgents/homebrew.mxcl.nginx.plist
+function nginx-start {
+        sudo launchctl load -w /Library/LaunchDaemons/homebrew.mxcl.nginx.plist
 }
 
-function launch-phpfpm {
-	launchctl unload -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php54.plist
-	launchctl load -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php54.plist
+function nginx-stop {
+        sudo launchctl unload -w /Library/LaunchDaemons/homebrew.mxcl.nginx.plist
+}
+
+function nginx-restart {
+        nginx-stop
+        nginx-start
+}
+
+function phpfpm-reload {
+        launchctl unload -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php55.plist
+        launchctl load -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php55.plist
 }
 
 ulimit -n 1024
