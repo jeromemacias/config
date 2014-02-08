@@ -59,6 +59,8 @@ alias l='ls -lh'
 alias ll='ls -lh'
 alias la='ls -lAh'
 
+alias sfunit='phpunit -c app'
+
 function launch-nginx {
 	sudo launchctl unload -w /System/Library/LaunchAgents/homebrew.mxcl.nginx.plist
 	sudo launchctl load -w /System/Library/LaunchAgents/homebrew.mxcl.nginx.plist
