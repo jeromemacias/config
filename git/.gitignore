@@ -3,6 +3,8 @@
 *.sublime-workspace
 .floo
 .flooignore
+.editorconfig
+.node-version
 
 .DS_Store
 .DS_Store?
@@ -11,3 +13,7 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+.vagrant
+.jshintrc
+.eslintrc
