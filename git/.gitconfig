@@ -1,6 +1,6 @@
 [core]
-	autocrlf = input
-	excludesfile = /usr/local/etc/git/.gitignore
+        autocrlf = input
+        excludesfile = /usr/local/etc/git/.gitignore
 
 [user]
         name = Jérôme Macias
@@ -8,36 +8,67 @@
 
 [alias]
         lg2 = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
         co = checkout
         br = branch --verbose
+        brm = branch --merged
         bra = branch -a
         ci = commit
         cia = commit --amend
+        oups = commit --amend -C HEAD
         changes = diff --name-status
         st = status
-        df = diff --ignore-space-at-eol
-        dfh = "!f() { git df --color \"$@\" | /usr/local/etc/git/diff-highlight; }; f"
-        dfc = diff --cached --ignore-space-at-eol
-        dfs = diff --stat
-        up = pull --rebase
+        sh = stash
+        sl = stash list
+        sp = stash pop
+        df = diff --ignore-space-at-eol --find-renames
+        dfh = "!f() { git diff --color --find-renames \"$@\" | /usr/local/etc/git/diff-highlight; }; f"
+        dfc = "!f() { git diff --color --cached --ignore-space-change --ignore-all-space --ignore-space-at-eol --ignore-blank-lines --find-renames \"$@\" | /usr/local/etc/git/diff-highlight; }; f"
+        dfs = diff --cached --stat
+        up = ! git remote update -p; git merge --ff-only @{u}
         unstage = reset --hard
-        undo = undo = git reset --soft HEAD^
+        undo = reset --soft HEAD^
+        rebc = rebase --continue
+        rebt = rebase --abort
+        rebs = rebase --skip
         last = log -1 HEAD
+        lint = ! git status --porcelain | /usr/bin/grep -e '^[AUM ][UM ].*\\.php$' | awk '{print $2}' | xargs -L 1 php -l
+        php-cs-fixer = ! git status --porcelain | /usr/bin/grep -e '^[AUM ][UM ].*\\.php$' | awk '{print $2}' | xargs -L 1 php-cs-fixer fix
+        force = push --force-with-lease
+	next = "!f() { git checkout `git log --reverse --ancestry-path HEAD..master | head -n 1 | cut -d \\  -f 2`; }; f"
 
 [color]
-	diff = auto
-	status = auto
-	branch = auto
-	interactive = auto
+        diff = auto
+        status = auto
+        branch = auto
+        interactive = auto
         ui = true
 
 [github]
         user = jeromemacias
-        token = ******
+        token = ****
+
 [push]
-	default = current
+        default = tracking
+
+[pull]
+        rebase = preserve
+
 [branch]
-	autosetuprebase = always
+        autosetuprebase = always
+
 [diff "pdfconv"]
-	textconv=pdftohtml -stdout
+        textconv=pdftohtml -stdout
+
+[grep]
+        linenumber = true
+
+[filter "media"]
+        required = true
+        clean = git media clean %f
+        smudge = git media smudge %f
+
+[filter "lfs"]
+        clean = git-lfs clean %f
+        smudge = git-lfs smudge %f
+        required = true
