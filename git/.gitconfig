@@ -21,9 +21,9 @@
         sh = stash
         sl = stash list
         sp = stash pop
-        df = diff --ignore-space-at-eol --find-renames
-        dfh = "!f() { git diff --color --find-renames \"$@\" | /usr/local/etc/git/diff-highlight; }; f"
-        dfc = "!f() { git diff --color --cached --ignore-space-change --ignore-all-space --ignore-space-at-eol --ignore-blank-lines --find-renames \"$@\" | /usr/local/etc/git/diff-highlight; }; f"
+        df = diff --ignore-space-at-eol --find-rename --compaction-heuristics
+        dfh = "!f() { git diff --color --find-renames --compaction-heuristic \"$@\" | /usr/local/etc/git/diff-highlight; }; f"
+        dfc = "!f() { git diff --color --cached --ignore-space-change --ignore-all-space --ignore-space-at-eol --ignore-blank-lines --find-renames --compaction-heuristic \"$@\" | /usr/local/etc/git/diff-highlight; }; f"
         dfs = diff --cached --stat
         up = ! git remote update -p; git merge --ff-only @{u}
         unstage = reset --hard
@@ -35,7 +35,7 @@
         lint = ! git status --porcelain | /usr/bin/grep -e '^[AUM ][UM ].*\\.php$' | awk '{print $2}' | xargs -L 1 php -l
         php-cs-fixer = ! git status --porcelain | /usr/bin/grep -e '^[AUM ][UM ].*\\.php$' | awk '{print $2}' | xargs -L 1 php-cs-fixer fix
         force = push --force-with-lease
-	next = "!f() { git checkout `git log --reverse --ancestry-path HEAD..master | head -n 1 | cut -d \\  -f 2`; }; f"
+       	next = "!f() { git checkout `git log --reverse --ancestry-path HEAD..master | head -n 1 | cut -d \\  -f 2`; }; f"
 
 [color]
         diff = auto
