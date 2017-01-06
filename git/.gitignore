@@ -3,7 +3,6 @@
 *.sublime-workspace
 .floo
 .flooignore
-.editorconfig
 .node-version
 
 .DS_Store
@@ -17,3 +16,4 @@ Thumbs.db
 .vagrant
 .jshintrc
 .eslintrc
+

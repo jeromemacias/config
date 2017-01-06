@@ -35,7 +35,7 @@
         lint = ! git status --porcelain | /usr/bin/grep -e '^[AUM ][UM ].*\\.php$' | awk '{print $2}' | xargs -L 1 php -l
         php-cs-fixer = ! git status --porcelain | /usr/bin/grep -e '^[AUM ][UM ].*\\.php$' | awk '{print $2}' | xargs -L 1 php-cs-fixer fix
         force = push --force-with-lease
-       	next = "!f() { git checkout `git log --reverse --ancestry-path HEAD..master | head -n 1 | cut -d \\  -f 2`; }; f"
+	next = "!f() { git checkout `git log --reverse --ancestry-path HEAD..master | head -n 1 | cut -d \\  -f 2`; }; f"
 
 [color]
         diff = auto
@@ -69,6 +69,6 @@
         smudge = git media smudge %f
 
 [filter "lfs"]
-        clean = git-lfs clean %f
-        smudge = git-lfs smudge %f
-        required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
