@@ -55,29 +55,13 @@ source $HOME/.rvm/scripts/rvm
 alias rc=". ~/.zshrc"
 alias updatedb="sudo /usr/libexec/locate.updatedb"
 
+alias composer=/Users/jerome/composer-no-xdebug.sh
+
 alias l='ls -lh'
 alias ll='ls -lh'
 alias la='ls -lAh'
 
 alias sfunit='phpunit -c app'
-
-function nginx-start {
-        sudo launchctl load -w /Library/LaunchDaemons/homebrew.mxcl.nginx.plist
-}
-
-function nginx-stop {
-        sudo launchctl unload -w /Library/LaunchDaemons/homebrew.mxcl.nginx.plist
-}
-
-function nginx-restart {
-        nginx-stop
-        nginx-start
-}
-
-function phpfpm-reload {
-        launchctl unload -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php55.plist
-        launchctl load -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php55.plist
-}
 
 ulimit -n 1024
 
