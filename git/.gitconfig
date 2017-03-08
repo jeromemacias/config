@@ -21,9 +21,9 @@
         sh = stash
         sl = stash list
         sp = stash pop
-        df = diff --ignore-space-at-eol --find-rename --compaction-heuristics
-        dfh = "!f() { git diff --color --find-renames --compaction-heuristic \"$@\" | /usr/local/etc/git/diff-highlight; }; f"
-        dfc = "!f() { git diff --color --cached --ignore-space-change --ignore-all-space --ignore-space-at-eol --ignore-blank-lines --find-renames --compaction-heuristic \"$@\" | /usr/local/etc/git/diff-highlight; }; f"
+        df = diff --ignore-space-at-eol --find-rename --indent-heuristic
+        dfh = "!f() { git diff --color --find-renames --indent-heuristic \"$@\" | /usr/local/etc/git/diff-highlight; }; f"
+        dfc = "!f() { git diff --color --cached --ignore-space-change --ignore-all-space --ignore-space-at-eol --ignore-blank-lines --find-renames --indent-heuristic \"$@\" | /usr/local/etc/git/diff-highlight; }; f"
         dfs = diff --cached --stat
         up = ! git remote update -p; git merge --ff-only @{u}
         unstage = reset --hard
