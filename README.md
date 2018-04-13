@@ -32,11 +32,16 @@
 * Vitesse de déplacement : `80%`
 * Décocher `Sens du défilement : naturel`
 * Cocher `Launchpad`
+* Cocher `Clic Silencieux`
 
 ### Son
 
 * Décocher `Activer les effets sonores de l'interface utilisateur`
 * Décocher `Emettre un son lorsque le volume est modifié`
+
+### Date et heure
+
+* Cocher `Afficher la date`
 
 # Préférences app osx
 
@@ -45,6 +50,7 @@
 ### Options Avancées
 
 * Cocher `Afficher toutes les extensions de fichier`
+* Lancer `defaults write com.apple.desktopservices DSDontWriteNetworkStores true`
 
 # Logiciels
 
@@ -70,6 +76,16 @@ Dans les options :
 * [Chrome](https://www.google.com/intl/fr/chrome/browser)
 * [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
 
+## Opera
+
+* [Opera](https://www.opera.com/fr)
+* [Install Chrome Extensions](https://addons.opera.com/fr/extensions/details/install-chrome-extensions/)
+* [JSON Lite](https://addons.opera.com/fr/extensions/details/json-lite/)
+* [Tab Suspender](https://addons.opera.com/fr/extensions/details/tab-suspender-tab-unloader/)
+* [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+* [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
+* [SEO Peek](https://chrome.google.com/webstore/detail/seo-peek/lkkpfhgjmocgneajknedjhodkjkkclod?hl=en)
+
 ## Applications
 
 ### App Store
@@ -78,19 +94,21 @@ Dans les options :
 * Slack
 * VPN Unlimited
 * XCode
+* Trello
+* Skitch
+* Be Focused
 
 ### Manuel
 
-* [Flash player](http://get.adobe.com/fr/flashplayer)
+* [Flash Player](http://get.adobe.com/fr/flashplayer)
 * [Silverlight](www.microsoft.com/getsilverlight)
-* [Crédit mutuel](https://mobile.creditmutuel.fr/light/fr/application-credit_mutuel_pc_mac/prod/index.html)
+* [Crédit Mutuel](https://mobile.creditmutuel.fr/light/fr/application-credit_mutuel_pc_mac/prod/index.html)
 * [DaisyDisk](http://www.daisydiskapp.com)
 * [Transmit](https://panic.com/transmit)
-* [YakYak](https://github.com/yakyak/yakyak/releases)
 * [Jing](https://www.techsmith.com/download/jing/)
 * [iTerm](http://www.iterm2.com/downloads.html)
 * [Postico](https://eggerapps.at/postico/)
-* [Atom](https://atom.io/)
+* [Visual Studio Code](https://code.visualstudio.com/download)
 * [Sublime Text](http://www.sublimetext.com/3)
 * [Postman](https://www.getpostman.com/)
 * [Docker](https://docs.docker.com/docker-for-mac/)
@@ -100,15 +118,12 @@ Dans les options :
 * [Loading](http://bonzaiapps.com/fr/loading/)
 * [Skype](https://www.skype.com/fr/download-skype/skype-for-computer/)
 * [Charles](https://www.charlesproxy.com/download/)
+* [GPG Suite](https://gpgtools.org/)
+* [GraphqlPlayground](https://github.com/graphcool/graphql-playground/releases)
 
-### Configuration
+## Configuration
 
-#### Contact
-
-Synchronisation avec gmail :
-??
-
-## Terminal
+### Terminal
 
 * Init locate db : `sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist`
 * [Homebrew](http://brew.sh)
@@ -127,29 +142,70 @@ Synchronisation avec gmail :
 
 #### Formules
 
-* `openssl`
-* `zsh`
+* `awscli`
+* `blackfire`
+* `boris  `
+* `ccat`
+* `cloc` (pour voir les stats par langage d'un répertoire)
+* `colordiff`
+* `composer phploc php-cs-fixer`
+* `coreutils`
+* `curl`
+* `diff-so-fancy`
+* `findutils`
+* `fswatch`
+* `git git-extras git-lfs gti`
 * `htop`
-* `git`
+* `httpie`
+* `hub`
+* `imagemagick gd mcrypt jpegoptim optipng`
+* `jq jid`
+* `mycli`
+* `node python brew-pip`
+* `nvm`
+* `openssl`
+* `pdftohtml` (pour git diff d'un pdf)
+* `pgcli`
 * `php71 --without-apache --with-pgsql --with-tidy --with-intl --with-debug --with-homebrew-openssl`
 * `php71-apcu php71-http php71-igbinary php71-imagick php71-intl`
 * `php71-memcache php71-redis php71-xdebug`
-* `composer jq phploc php-cs-fixer`
-* `sqlite imagemagick gd curl mcrypt`
-* `node python brew-pip`
-* `the_silver_search`
-* `pdftohtml` (pour git diff d'un pdf)
-* `cloc` (pour voir les stats par langage d'un répertoire)
-* `blackfire`
-* `postgres`
+* `postgres pgcli`
+* `python python3`
 * `ruby`
-* `python`
+* `sqlite`
+* `thefuck`
+* `the_silver_search`
+* `unrar`
+* `wget`
+* `yarn`
+* `zsh zsh-completions`
+
+### Nodejs
+
+#### nvm
+
+* `nvm install lts/carbon`
+
+#### Global packages
+
+* `speed-test`
+* `fkill-cli`
 
 ### Configurations
+
+#### iTerm
+
+* [Récupérer le profile](https://raw.github.com/jeromemacias/config/master/iterm/Default)
+* Poser dans `~/Library/Application\ Support/iTerm2/DynamicProfiles`
 
 #### vim
 
 * [Récupérer la config](https://raw.github.com/jeromemacias/config/master/vim/.vimrc)
+
+#### vscode
+
+* Police : https://github.com/tonsky/FiraCode/wiki/VS-Code-Instructions
+* Settings : https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 
 #### zsh
 
@@ -173,16 +229,11 @@ Synchronisation avec gmail :
 
 #### python
 
-* `pip install --upgrade pip setuptools`
+* `pip3 install --upgrade pip setuptools`
 
 #### glances
 
-* `pip install --upgrade Glances`
-
-#### composer
-
-* [Récupérer le script composer/no-xedug.sh](https://github.com/jeromemacias/config/tree/master/composer/no-xdebug.sh)
-* `composer config -g github-oauth.github.com <key>`
+* `pip3 install --upgrade Glances`
 
 #### travis-ci
 
