@@ -3,8 +3,9 @@
         excludesfile = /usr/local/etc/git/.gitignore
 
 [user]
-        name = Jérôme Macias
-        email = jerome.macias@gmail.com
+	name = Jérôme Macias
+	email = jerome.macias@gmail.com
+	signingkey = ****
 
 [alias]
         lg2 = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
@@ -13,7 +14,7 @@
         br = branch --verbose
         brm = branch --merged
         bra = branch -a
-        ci = commit
+        ci = commit -S
         cia = commit --amend
         oups = commit --amend -C HEAD
         changes = diff --name-status
@@ -22,8 +23,9 @@
         sl = stash list
         sp = stash pop
         df = diff --ignore-space-at-eol --find-rename --indent-heuristic
-        dfh = "!f() { git diff --color --find-renames --indent-heuristic \"$@\" | /usr/local/etc/git/diff-highlight; }; f"
-        dfc = "!f() { git diff --color --cached --ignore-space-change --ignore-all-space --ignore-space-at-eol --ignore-blank-lines --find-renames --indent-heuristic \"$@\" | /usr/local/etc/git/diff-highlight; }; f"
+        dfh = "!f() { git diff --color --find-renames --indent-heuristic \"$@\" | diff-so-fancy  | less --tabs=4 -RFX; }; f"
+        dffh = "!f() { git diff --no-ext-diff --color --find-renames --indent-heuristic \"$@\" | diff-so-fancy  | less --tabs=4 -RFX; }; f"
+        dfc = "!f() { git diff --color --cached --ignore-space-change --ignore-all-space --ignore-space-at-eol --ignore-blank-lines --find-renames --indent-heuristic \"$@\" | diff-so-fancy  | less --tabs=4 -RFX; }; f"
         dfs = diff --cached --stat
         up = ! git remote update -p; git merge --ff-only @{u}
         unstage = reset --hard
@@ -38,11 +40,11 @@
 	next = "!f() { git checkout `git log --reverse --ancestry-path HEAD..master | head -n 1 | cut -d \\  -f 2`; }; f"
 
 [color]
-        diff = auto
+#        diff = auto
         status = auto
         branch = auto
         interactive = auto
-        ui = true
+	ui = true
 
 [github]
         user = jeromemacias
@@ -72,3 +74,24 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	required = true
+
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+
+[color "diff"]
+	meta = 227
+	frag = magenta bold
+	commit = 227 bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[credential]
+	#helper = !aws codecommit credential-helper $@
+	UseHttpPath = true
+
+[diff "nodiff"]
+	command = /usr/bin/true
