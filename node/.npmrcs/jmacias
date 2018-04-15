@@ -1,0 +1,6 @@
+progress=false
+spin=false
+save-prefix=~
+init.author.name=Jérôme Macias
+init.author.email=jerome.macias@gmail.com
+sign-git-tag=true

@@ -120,6 +120,7 @@ Dans les options :
 * [Charles](https://www.charlesproxy.com/download/)
 * [GPG Suite](https://gpgtools.org/)
 * [GraphqlPlayground](https://github.com/graphcool/graphql-playground/releases)
+* [Gas Mask](https://github.com/2ndalpha/gasmask)
 
 ## Configuration
 
@@ -190,6 +191,7 @@ Dans les options :
 
 * `speed-test`
 * `fkill-cli`
+* `npmrc`
 
 ### Configurations
 
@@ -206,6 +208,7 @@ Dans les options :
 
 * Police : https://github.com/tonsky/FiraCode/wiki/VS-Code-Instructions
 * Settings : https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
+* Command line : https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
 
 #### zsh
 
