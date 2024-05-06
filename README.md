@@ -1,32 +1,67 @@
 # Préférences systèmes
 
-## Personnel
+## Général
 
-### Général
+* `Couleur d'accentuation` : `Graphite`
+* `Couleur de surbrillance` : `Graphite`
 
-* `Apparence` : `Graphite`
-* `Couleur de contraste` : `Graphite`
-
-### Dock
+## Bureau et Dock
 
 * `Position` : `Gauche`
 * `Type de réduction` : `Effet d'échelle`
+* Cocher `Masquer/afficher automatiquement le dock`
+* Décocher `Animer les applications lors de leur ouverture`
 
-### Sécurité et confidentialité
+## Spotlight
 
-* `Autoriser les applicatins téléchargées de :`, cocher `N'importe où`
+Laisser cocher :
+* Applications
+* Calculette
+* Préférence Système
 
-## Matériel
+## Accessibilité
 
-### Clavier
+### Affichafge
 
-* Cocher `Utiliser les touches F2, F2 et ainsi de suite, comme des touches de fonction standard`
+* cocher `Réduire les animations`
 
-### Moniteur
+### Contrôle du pointeur
+
+* Bouton `Options du trackpad` :
+  * Cocher `Utiliser le trackpad pour le glissement`
+  * `Style de glissement` : `faire glisser avec trois doigts`
+
+## Trackpad
+
+### Pointer et cliquer
+
+* Cocher `Toucher pour cliquer`
+* Déplacement `6 sur 10`
+
+### Faire défiler et zoomer
+
+* Décocher `Sens du défilement naturel`
+
+### Gestes supplémentaires
+
+* `Balayer entre apps en plein écran` : `Balayer latéralement avec 4 doigts`
+* `Mission control` : `Balayer vers le haut avec 4 doigts`
+* `App exposé` : `Balayer vers le bas avec 4 doigts`
+
+## Clavier
+
+### Raccourcis
+
+#### Mission Control
+
+* Décocher `Mission Control`
+* Décocher `Fenetres de l'application`
+
+## Moniteur
 
 * Décocher `Régler la luminosité automatiquement`
 
-### Trackpad
+## Trackpad
 
 * Cocher `Faire glisser avec 3 doigts`
 * Vitesse de déplacement : `80%`
@@ -34,16 +69,22 @@
 * Cocher `Launchpad`
 * Cocher `Clic Silencieux`
 
-### Son
+## Son
 
 * Décocher `Activer les effets sonores de l'interface utilisateur`
 * Décocher `Emettre un son lorsque le volume est modifié`
 
-### Date et heure
+## Date et heure
 
 * Cocher `Afficher la date`
 
-# Préférences app osx
+## Mise à jour logiciels
+
+### Avancée...
+
+* Décocher `Télécharger les nouvelles mises à jour...`
+
+# Préférences App OSX
 
 ## Finder
 
@@ -58,7 +99,14 @@
 
 * [Firefox](http://www.mozilla.org/fr/firefox)
 * [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript)
-* [Ghostery](https://addons.mozilla.org/fr/firefox/user/ghostery/)
+* [Stylus](https://addons.mozilla.org/fr/firefox/addon/styl-us/)
+* [AWS Extend Switch Roles](https://addons.mozilla.org/fr/firefox/addon/aws-extend-switch-roles3/)
+* Bitwarden
+* Dark Reader
+* Keepa
+* Refined Github
+* Startpage
+* Simple Tab Groups
 
 ### Configurer firefox
 
@@ -73,56 +121,63 @@ Dans les options :
 
 ## Chrome et plugins
 
-* [Chrome](https://www.google.com/intl/fr/chrome/browser)
-* [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
+* [Vivaldi](https://vivaldi.com)
 
-## Opera
+=> Puis activer la synchronisation
 
-* [Opera](https://www.opera.com/fr)
-* [Install Chrome Extensions](https://addons.opera.com/fr/extensions/details/install-chrome-extensions/)
-* [JSON Lite](https://addons.opera.com/fr/extensions/details/json-lite/)
-* [Tab Suspender](https://addons.opera.com/fr/extensions/details/tab-suspender-tab-unloader/)
+### Pour infos, les extensions
+
+* [JSON Lite](https://chrome.google.com/webstore/detail/json-lite/acacmjcicejlmjcheoklfdchempahoag)
 * [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
-* [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
-* [SEO Peek](https://chrome.google.com/webstore/detail/seo-peek/lkkpfhgjmocgneajknedjhodkjkkclod?hl=en)
+* Requestly
+* Startpage
 
 ## Applications
 
 ### App Store
 
-* TweetDeck
+* Bear
+* CSView
+* HP Smart For Desktop
+* iHosts
 * Slack
 * VPN Unlimited
 * XCode
 * Trello
 * Skitch
-* Be Focused
+* DevUtils
+* Transmit
+* DaisyDisk
 
 ### Manuel
 
-* [Flash Player](http://get.adobe.com/fr/flashplayer)
-* [Silverlight](www.microsoft.com/getsilverlight)
-* [Crédit Mutuel](https://mobile.creditmutuel.fr/light/fr/application-credit_mutuel_pc_mac/prod/index.html)
-* [DaisyDisk](http://www.daisydiskapp.com)
-* [Transmit](https://panic.com/transmit)
-* [Jing](https://www.techsmith.com/download/jing/)
-* [iTerm](http://www.iterm2.com/downloads.html)
-* [Postico](https://eggerapps.at/postico/)
+* [Context](https://contexts.co/)
+* [Warp](https://www.warp.dev/)
+* [Table Plus](https://tableplus.com/)
 * [Visual Studio Code](https://code.visualstudio.com/download)
 * [Sublime Text](http://www.sublimetext.com/3)
 * [Postman](https://www.getpostman.com/)
 * [Docker](https://docs.docker.com/docker-for-mac/)
 * [VLC](http://www.videolan.org/vlc/)
 * [Mysql Workbench](http://dev.mysql.com/downloads/workbench/)
-* [Audirvana](https://audirvana.com)
 * [Loading](http://bonzaiapps.com/fr/loading/)
 * [Skype](https://www.skype.com/fr/download-skype/skype-for-computer/)
 * [Charles](https://www.charlesproxy.com/download/)
+* [Gitify](https://www.gitify.io/)
 * [GPG Suite](https://gpgtools.org/)
-* [GraphqlPlayground](https://github.com/graphcool/graphql-playground/releases)
 * [Gas Mask](https://github.com/2ndalpha/gasmask)
+* noTunes
+* AWS VPN Client
+* Forticlient
+* Microsoft Teams
+* Miro
+* Cakebrew
 
 ## Configuration
+
+### Contexts
+
+* Dans `Search`, changer le `Search With` en `Option-Space`
 
 ### Terminal
 
@@ -131,39 +186,77 @@ Dans les options :
 * Generate ssh keygen : `ssh-keygen -t rsa -C "jerome.macias@gmail.com"`
 * [Récupérer la config](https://raw.github.com/jeromemacias/config/master/.ssh/config)
 
-### iTerm
+### Warp
 
-* [Follow this guide](https://gist.github.com/kevin-smets/8568070)
+* Install font ? Menlo, font size : 13 et line heigth 1.2 
+* Thème Dracula
+
+### TMux
+
+* Aide : https://tmuxcheatsheet.com/
+* [Récupérer la config](https://raw.github.com/jeromemacias/config/master/tmux/.tmux.conf)
+* Installer [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
+* Installer [Tmux Resurrect](https://github.com/tmux-plugins/tmux-resurrect)
+* Installer [Tmux Contininuum](https://github.com/tmux-plugins/tmux-continuum)
+* Installer [Tmux Open](https://github.com/tmux-plugins/tmux-open)
 
 ### Docker
 
+* Installer colima
+* [Récupérer la config](https://raw.github.com/jeromemacias/config/master/colima/colima.yaml)
 * `sudo curl -o /Library/LaunchDaemons/com.ralphschindler.docker_10254_alias.plist https://gist.githubusercontent.com/ralphschindler/535dc5916ccbd06f53c1b0ee5a868c93/raw/com.ralphschindler.docker_10254_alias.plist`
 
+### GPG
+
+```
+gpg --edit-key MYKEYID
+
+gpg> trust
+...
+Your decision? 5
+Do you really want to set this key to ultimate trust? (y/N) y
+```
+
 ### Brew
+
+#### Taps
+
+* `brew tap homebrew/bundle`
+* `brew tap homebrew/cask`
+* `brew tap homebrew/cask-fonts`
+* `brew tap homebrew/core`
+* `brew tap homebrew/services`
+* `brew tap mas-cli/tap`
+
+
+#### Restaurer
+
+* Dans le répertoire `homebrew`, lancer `brew bundle`
 
 #### Formules
 
 * `awscli`
-* `blackfire`
-* `boris  `
+* `bat`
+* `boris`
 * `ccat`
 * `cloc` (pour voir les stats par langage d'un répertoire)
+* `croc`
 * `colordiff`
 * `composer phploc php-cs-fixer`
 * `coreutils`
 * `curl`
 * `diff-so-fancy`
 * `findutils`
+* `Schniz/tap/fnm`
 * `fswatch`
-* `git git-extras git-lfs gti`
+* `git git-extras git-lfs git-octopus gti hub gh`
 * `htop`
 * `httpie`
-* `hub`
 * `imagemagick gd mcrypt jpegoptim optipng`
 * `jq jid`
+* `mkcert nss`
 * `mycli`
-* `node python brew-pip`
-* `nvm`
+* `ncdu`
 * `openssl`
 * `pdftohtml` (pour git diff d'un pdf)
 * `pgcli`
@@ -175,30 +268,29 @@ Dans les options :
 * `ruby`
 * `sqlite`
 * `thefuck`
-* `the_silver_search`
+* `tmate`
+* `tmux`
+* `tree`
 * `unrar`
 * `wget`
 * `yarn`
+* `yq`
 * `zsh zsh-completions`
+* `mas`
+* `fnm`
 
 ### Nodejs
 
-#### nvm
+#### fnm
 
-* `nvm install lts/carbon`
+* `fnm install lts-iron`
 
 #### Global packages
 
-* `speed-test`
 * `fkill-cli`
 * `npmrc`
 
 ### Configurations
-
-#### iTerm
-
-* [Récupérer le profile](https://raw.github.com/jeromemacias/config/master/iterm/Default)
-* Poser dans `~/Library/Application\ Support/iTerm2/DynamicProfiles`
 
 #### vim
 
@@ -207,12 +299,13 @@ Dans les options :
 #### vscode
 
 * Police : https://github.com/tonsky/FiraCode/wiki/VS-Code-Instructions
-* Settings : https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 * Command line : https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
+* Se connecter pour synchro
 
 #### zsh
 
 * `curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh`
+* [Installer zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
 * [Récupérer le zshrc](https://raw.github.com/jeromemacias/config/master/zsh/.zshrc)
 * [Récupérer le zprofile](https://raw.github.com/jeromemacias/config/master/zsh/.zprofile)
 * `sudo sh -c "echo \"/usr/local/bin/zsh\" >> /etc/shells"`
@@ -221,6 +314,12 @@ Dans les options :
 #### git
 
 * [Récupérer les config](https://github.com/jeromemacias/config/tree/master/git)
+
+#### node
+
+* Copier [le npmrc par défaut]((https://raw.github.com/jeromemacias/config/master/npm/default)) `~/.npmrc`
+* Lancer `npmrc`
+* Si besoin nouveau profile : https://github.com/deoxxa/npmrc#create-a-new-npmrc-profile
 
 #### php
 
@@ -240,4 +339,4 @@ Dans les options :
 
 #### travis-ci
 
-* `gem install travis -v 1.8.5 --no-rdoc --no-ri`
+* `gem install travis --no-rdoc --no-ri`

@@ -1,6 +1,7 @@
 .idea
 *.sublime-project
 *.sublime-workspace
+.vscode
 .floo
 .flooignore
 .node-version
@@ -16,4 +17,3 @@ Thumbs.db
 .vagrant
 .jshintrc
 .eslintrc
-

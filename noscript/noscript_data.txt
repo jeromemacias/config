@@ -1,0 +1,203 @@
+{
+  "policy": {
+    "DEFAULT": {
+      "capabilities": [
+        "frame",
+        "fetch",
+        "other",
+        "noscript"
+      ],
+      "temp": false
+    },
+    "TRUSTED": {
+      "capabilities": [
+        "script",
+        "object",
+        "media",
+        "frame",
+        "font",
+        "webgl",
+        "fetch",
+        "ping",
+        "other",
+        "noscript",
+        "unchecked_css",
+        "lan"
+      ],
+      "temp": false
+    },
+    "UNTRUSTED": {
+      "capabilities": [],
+      "temp": false
+    },
+    "sites": {
+      "trusted": [
+        "§:addons.mozilla.org",
+        "§:afx.ms",
+        "§:ajax.aspnetcdn.com",
+        "§:ajax.googleapis.com",
+        "§:bootstrapcdn.com",
+        "§:code.jquery.com",
+        "§:firstdata.com",
+        "§:firstdata.lv",
+        "§:gfx.ms",
+        "§:googlevideo.com",
+        "§:gstatic.com",
+        "§:hotmail.com",
+        "§:live.com",
+        "§:live.net",
+        "§:maps.googleapis.com",
+        "§:mozilla.net",
+        "§:netflix.com",
+        "§:nflxext.com",
+        "§:nflximg.com",
+        "§:nflxvideo.net",
+        "§:noscript.net",
+        "§:outlook.com",
+        "§:passport.com",
+        "§:passport.net",
+        "§:passportimages.com",
+        "§:paypal.com",
+        "§:paypalobjects.com",
+        "§:securecode.com",
+        "§:securesuite.net",
+        "§:sfx.ms",
+        "§:tinymce.cachefly.net",
+        "§:wlxrs.com",
+        "§:yahoo.com",
+        "§:yahooapis.com",
+        "§:yimg.com",
+        "§:youtube.com",
+        "§:ytimg.com",
+        "§:slack-edge.com",
+        "§:google.com",
+        "§:jsdelivr.net",
+        "§:service-public.fr",
+        "§:momentjs.com",
+        "§:e-i.com",
+        "§:githubassets.com",
+        "§:atl-paas.net",
+        "§:malt.com",
+        "§:prismic.io",
+        "§:typekit.net",
+        "§:shopify.com",
+        "§:shopifysvc.com",
+        "§:shopifycs.com",
+        "§:stripe.com",
+        "§:welcome-ui.com",
+        "§:sstatic.net",
+        "§:cookielaw.org",
+        "§:colissimo.fr",
+        "§:mapbox.com",
+        "§:office.net",
+        "§:twimg.com",
+        "§:viewscreen.githubusercontent.com",
+        "§:atlassian.com",
+        "§:website-files.com",
+        "§:unpkg.com",
+        "§:serverless-extras.com",
+        "§:awsstatic.com",
+        "§:msauth.net",
+        "§:msftauth.net",
+        "§:tiime-apps.com",
+        "§:name.tools",
+        "§:d2lc6wg1utpe39.cloudfront.net",
+        "§:googletagmanager.com",
+        "§:googleusercontent.com"
+      ],
+      "untrusted": [],
+      "custom": {
+        "https://ngs09a.digiteka.net/17ffeab764d798587faa674c89377180/c3BlZWQ9MTUwO3VzZXI9bmdzO2V4cGlyZT02MGJhYTI5Mw,,/nvme0n1p6/bb/0a/bb0aa91b0652b6e7b9cd85970194654d283a69bf.mp4": {
+          "capabilities": [
+            "frame",
+            "fetch",
+            "other",
+            "noscript",
+            "media"
+          ],
+          "temp": false
+        },
+        "https://scontent-cdt1-1.cdninstagram.com/v/t50.2886-16/10000000_121103103523577_673851086747701692_n.mp4": {
+          "capabilities": [
+            "frame",
+            "fetch",
+            "other",
+            "noscript",
+            "media"
+          ],
+          "temp": false
+        },
+        "https://cdn2.hubspot.net/hubfs/3370273/Website_assets_3/videos/TROUVEZ%20V2.mp4": {
+          "capabilities": [
+            "frame",
+            "fetch",
+            "other",
+            "noscript",
+            "media"
+          ],
+          "temp": false
+        },
+        "https://player.vimeo.com/progressive_redirect/playback/463974151/rendition/1080p/file.mp4": {
+          "capabilities": [
+            "frame",
+            "fetch",
+            "other",
+            "noscript",
+            "media"
+          ],
+          "temp": false
+        },
+        "https://vod-progressive.akamaized.net/exp=1678282875~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F2794%2F18%2F463974151%2F3103477328.mp4~hmac=f48515952cd521678c41f932c55012e24a1a24233956dde2ed1d361fc79b415b/vimeo-prod-skyfire-std-us/01/2794/18/463974151/3103477328.mp4": {
+          "capabilities": [
+            "frame",
+            "fetch",
+            "other",
+            "noscript",
+            "media"
+          ],
+          "temp": false
+        },
+        "https://vod-progressive.akamaized.net": {
+          "capabilities": [
+            "frame",
+            "fetch",
+            "other",
+            "noscript",
+            "media"
+          ],
+          "temp": false
+        }
+      }
+    },
+    "enforced": true,
+    "autoAllowTop": true
+  },
+  "local": {
+    "debug": false,
+    "showCtxMenuItem": true,
+    "showCountBadge": true,
+    "showFullAddresses": false,
+    "amnesticUpdates": false,
+    "storage": "local",
+    "uuid": "fbcf0b43-d618-4562-89fa-2aad415e3e0e",
+    "highContrast": false
+  },
+  "sync": {
+    "global": false,
+    "xss": true,
+    "TabGuardMode": "incognito",
+    "TabGuardPrompt": "post",
+    "cascadeRestrictions": true,
+    "overrideTorBrowserPolicy": false,
+    "clearclick": true,
+    "storage": "sync"
+  },
+  "xssUserChoices": {
+    "https://www.bouyguestelecom-entreprises.fr>https://8940903.fls.doubleclick.net": "block",
+    "https://www.lg.com>https://8777654.fls.doubleclick.net": "block",
+    "https://www.lg.com>https://8777393.fls.doubleclick.net": "block",
+    "https://login.microsoftonline.com>https://portal.azure.com": "allow",
+    "https://portal.azure.com>https://login.microsoftonline.com": "allow",
+    "https://www.leroymerlin.fr>https://9915855.fls.doubleclick.net": "block"
+  }
+}
