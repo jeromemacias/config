@@ -73,11 +73,10 @@ PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/g
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 PATH=~/.composer/vendor/bin:$PATH
 
-alias ls='ls --color=auto'
+alias ls='eza'
 alias src='omz reload'
 
 eval $(thefuck --alias)
-source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
 
 #export NVM_DIR="$HOME/.nvm"
 #source "/usr/local/opt/nvm/nvm.sh"
@@ -141,7 +140,19 @@ next_get_ip() {
   aws ec2 describe-instances --filters 'Name=tag:Name,Values='"$1"'' --query 'Reservations[*].Instances[*].PublicIpAddress' --output text
 }
 
-function iad_aws_ec2_connect() {
+iad_aws_sso_login() {
+  PROFILE=$1
+  if [[ -z "$PROFILE" ]]; then
+    echo "Missing required parameter PROFILE"
+    exit 3
+  fi
+  aws sso login --profile "$PROFILE"
+  aws-export-credentials --profile "$PROFILE" --credentials-file-profile "$PROFILE-export"
+  # uncomment to not set --profile xxx on every aws command
+  # export AWS_DEFAULT_PROFILE="$PROFILE"
+}
+
+iad_aws_ec2_connect() {
   local name="${1:?}"
   local profile="${2:?}"
   local region="${3:-eu-west-1}"
@@ -149,3 +160,17 @@ function iad_aws_ec2_connect() {
   instance_id=$(AWS_REGION="$region" AWS_PROFILE="$profile" aws ec2 describe-instances --query 'Reservations[*].Instances[*].InstanceId' --filters  Name=instance-state-name,Values=running "Name=tag:Name,Values=[$name]" --output text)
   AWS_REGION="$region" AWS_PROFILE="$profile" aws ssm start-session --target "$instance_id"
 }
+
+# Created by `pipx` on 2024-05-06 21:52:26
+export PATH="$PATH:/Users/jerome/.local/bin"
+# For terraform
+export PATH=$PATH:$HOME/bin
+export PATH="/opt/homebrew/opt/pnpm@9/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/jerome/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

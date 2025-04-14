@@ -21,7 +21,7 @@ Laisser cocher :
 
 ## Accessibilité
 
-### Affichafge
+### Affichage
 
 * cocher `Réduire les animations`
 
@@ -191,7 +191,7 @@ Dans les options :
 * Install font ? Menlo, font size : 13 et line heigth 1.2 
 * Thème Dracula
 
-### TMux
+### Tmux
 
 * Aide : https://tmuxcheatsheet.com/
 * [Récupérer la config](https://raw.github.com/jeromemacias/config/master/tmux/.tmux.conf)
@@ -209,6 +209,8 @@ Dans les options :
 ### GPG
 
 ```
+gpg --list-keys
+
 gpg --edit-key MYKEYID
 
 gpg> trust
@@ -328,15 +330,3 @@ Do you really want to set this key to ultimate trust? (y/N) y
  * `memory_limit = 512M`
 * `vim $(brew --prefix)/etc/php/7.1/conf.d/ext-xdebug.ini`:
  * `xdebug.max_nesting_level=2048`
-
-#### python
-
-* `pip3 install --upgrade pip setuptools`
-
-#### glances
-
-* `pip3 install --upgrade Glances`
-
-#### travis-ci
-
-* `gem install travis --no-rdoc --no-ri`
